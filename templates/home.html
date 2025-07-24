@@ -3,9 +3,7 @@
 {% block title %}Home{% endblock title %}
 {% block content %}
     {% if user.is_authenticated %}
-        <!-- yangi kod shu yerda! -->
         Salom, {{ user.username }}! Siz {{ user.age }} yoshdasiz.
-        <!-- yangi kod tugadi -->
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
             <button type="submit">Chiqish</button>
